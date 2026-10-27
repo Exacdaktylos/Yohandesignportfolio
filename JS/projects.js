@@ -1,81 +1,38 @@
-/* =============================================
-   YOHAN WICKRAMASINGHE — Projects Page Scripts
-   ============================================= */
+/* Projects page: category filter + staggered grid layout */
+window.YWPage = function (YW) {
+  'use strict';
+  const { $, $$, reduce } = YW;
+  const grid = $('#pjGrid'), cards = $$('.pj-card', grid), btns = $$('.chip-btn'), count = $('#pjCount');
+  const pattern = [7, 5, 5, 7, 6, 6];        /* column spans, repeats */
+  const arFor = span => span >= 7 ? '16/10' : span === 5 ? '4/5' : '4/3';
 
-/* Hamburger menu */
-const hamburger  = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-
-function openMenu() {
-  hamburger.classList.add('open');
-  mobileMenu.classList.add('open');
-  hamburger.setAttribute('aria-expanded', 'true');
-  mobileMenu.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
-function closeMenu() {
-  hamburger.classList.remove('open');
-  mobileMenu.classList.remove('open');
-  hamburger.setAttribute('aria-expanded', 'false');
-  mobileMenu.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-}
-hamburger.addEventListener('click', () => hamburger.classList.contains('open') ? closeMenu() : openMenu());
-document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', closeMenu));
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-
-
-/* Scroll reveal */
-const revealEls = document.querySelectorAll('.reveal');
-const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); }
-  });
-}, { threshold: 0.08 });
-revealEls.forEach(el => revealObs.observe(el));
-
-
-/* Nav shadow on scroll */
-const nav = document.querySelector('nav');
-window.addEventListener('scroll', () => {
-  nav.style.boxShadow = window.scrollY > 20 ? '0 1px 40px rgba(0,0,0,0.5)' : 'none';
-});
-
-
-/* Filter bar
-   Clicking a category button shows only matching
-   .project-item elements, hides the rest.
-   FIX: We hide the parent .project-link <a> tag so
-   the card isn't clickable when filtered out.       */
-const filterBtns   = document.querySelectorAll('.filter-btn');
-const projectItems = document.querySelectorAll('.project-item');
-const emptyState   = document.getElementById('empty-state');
-
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const filter = btn.dataset.filter;
-
-    /* Update active button */
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    /* Show / hide projects — target the parent <a> so the
-       link itself is also hidden and non-clickable          */
-    let visibleCount = 0;
-    projectItems.forEach(item => {
-      const match = filter === 'all' || item.dataset.category === filter;
-      const link  = item.closest('.project-link') || item; // fall back to item if no wrapper
-      if (match) {
-        link.style.display = '';
-        item.classList.remove('hidden');
-        visibleCount++;
-      } else {
-        link.style.display = 'none';
-        item.classList.add('hidden');
-      }
+  function layout() {
+    cards.filter(c => !c.hidden).forEach((c, i) => {
+      const span = pattern[i % pattern.length];
+      c.style.setProperty('--span', span);
+      c.style.setProperty('--ar', arFor(span));
     });
+  }
+  layout();
+  /* first reveal */
+  YW.wipe($$('.pj-mask'), 'top 90%');
 
-    /* Show empty state if nothing matches */
-    emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
-  });
-});
+  function apply(filter) {
+    const show = cards.filter(c => filter === 'all' || c.dataset.cat === filter);
+    const finish = () => {
+      cards.forEach(c => { c.hidden = !show.includes(c); });
+      layout();
+      gsap.set($$('.pj-mask'), { clearProps: 'clipPath' });
+      count.textContent = show.length + (show.length === 1 ? ' project' : ' projects');
+      if (!reduce) gsap.fromTo(show, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out', stagger: 0.08, clearProps: 'opacity,transform' });
+      ScrollTrigger.refresh();
+    };
+    if (reduce) return finish();
+    gsap.to(cards.filter(c => !c.hidden), { opacity: 0, y: -20, duration: 0.25, ease: 'power2.in', onComplete: finish });
+  }
+  btns.forEach(b => b.addEventListener('click', () => {
+    if (b.getAttribute('aria-pressed') === 'true') return;
+    btns.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    apply(b.dataset.filter);
+  }));
+};

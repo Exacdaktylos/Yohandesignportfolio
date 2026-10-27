@@ -1,219 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Yohan Wickramasinghe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Cabinet+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/projects.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Yohan Wickramasinghe</title>
+<meta name="description" content="Campaigns, brand work and design projects, from concept to execution.">
+<meta name="theme-color" content="#070707">
+<meta property="og:title" content="Projects | Yohan Wickramasinghe">
+<meta property="og:description" content="Campaigns, brand work and design projects, from concept to execution.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../favicon.ico">
+<script>
+(function(){var d=document.documentElement;d.classList.add('js');
+try{if(sessionStorage.getItem('ywSeen'))d.classList.add('no-pre');
+if(sessionStorage.getItem('ywNav')==='1'){d.classList.add('is-entering');setTimeout(function(){d.classList.remove('is-entering')},4000)}}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/site.css">
+<link rel="stylesheet" href="../CSS/projects.css">
 </head>
 <body>
+<div class="curtain" aria-hidden="true"></div>
+<div class="scrollbar" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-bubble" aria-hidden="true"></div>
 
-  <!-- NAV -->
-  <nav>
-    <a href="../index.html" class="logo">YW<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="aboutme.html">About Me</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-       <li><a href="blogs.html">Blogs</a></li>
-    </ul>
-    <a href="contactme.html" class="nav-btn">Contact me</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<header class="nav" id="nav">
+  <a class="logo" href="/" aria-label="Yohan Wickramasinghe, home">YW<span>.</span></a>
+  <nav aria-label="Main">
+    <ul class="nav-links"><li><a href="/public/aboutme">About Me</a></li><li><a href="/public/projects" aria-current="page">Projects</a></li><li><a href="/public/blogs">Blogs</a></li></ul>
   </nav>
+  <a class="nav-btn" href="/public/contactme">Contact me</a>
+  <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</header>
 
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <ul class="mobile-nav-links">
-        <li><a href="aboutme.html" class="mobile-link">About Me</a></li>
-        <li><a href="projects.html" class="mobile-link active">Projects</a></li>
-         <li><a href="blogs.html" class="mobile-link">Blogs</a></li>
-      </ul>
-      <a href="contactme.html" class="mobile-cta">Contact me</a>
-    </div>
+<div class="menu" id="menu" aria-hidden="true">
+  <ul><li><a href="/public/aboutme">About Me</a></li><li><a href="/public/projects" aria-current="page">Projects</a></li><li><a href="/public/blogs">Blogs</a></li><li><a href="/public/contactme">Contact me</a></li></ul>
+  <p>Graphic designer</p>
+</div>
+
+<main>
+  <header class="page-hero" data-theme="ink">
+    <div class="hero-bg" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="halftone"></div></div>
+    <h1 class="page-title kinetic" aria-label="Work that speaks for itself"><span class="line" aria-hidden="true"><span class="word">Work</span><span class="word">that</span></span><span class="line" aria-hidden="true"><span class="word">speaks</span><span class="word">for</span><span class="word">itself</span></span></h1>
+    <p class="page-sub" data-intro>A collection of campaigns, brand work and design projects, from concept to execution.</p>
+  </header>
+  <div class="pj-bar" data-theme="ink">
+    <div class="chips" role="group" aria-label="Filter projects"><button class="chip-btn" type="button" data-filter="all" aria-pressed="true">All</button><button class="chip-btn" type="button" data-filter="campaign" aria-pressed="false">Campaigns</button><button class="chip-btn" type="button" data-filter="branding" aria-pressed="false">Branding</button><button class="chip-btn" type="button" data-filter="event" aria-pressed="false">Events</button><button class="chip-btn" type="button" data-filter="corporate" aria-pressed="false">Corporate</button></div>
+    <p class="pj-count" id="pjCount" aria-live="polite">5 projects</p>
   </div>
-
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="hero-bg">
-      <div class="orb orb1"></div>
-      <div class="orb orb2"></div>
-    </div>
-    <div class="page-hero-inner">
-      <div class="hero-eyebrow">
-        <span class="eyebrow-dot"></span>
-        All Projects
-      </div>
-      <h1>Work that<br><span class="grad-text">speaks for itself</span></h1>
-      <p class="hero-sub">A full collection of campaigns, brand work, and design projects; from concept to execution.</p>
+  <section class="pj-wrap light" data-theme="paper" aria-label="Projects">
+    <div class="pj-grid" id="pjGrid">
+<a class="pj-card" href="/public/igvirnm" data-cat="campaign" data-cursor="View">
+  <span class="pj-fig"><span class="pj-mask"><img src="../Assets/featuredv4.png" width="1000" height="625" alt="Driving Global Impact Through Youth Exchange" loading="lazy"></span><span class="pill fill pj-badge">Featured</span></span>
+  <span class="pj-body"><span class="pj-cat">Attraction Campaigns</span><h2 class="display">Driving Global Impact Through Youth Exchange</h2><p class="d">Designed and executed attraction campaigns for iGV IR &amp; M at AIESEC in SLIIT, connecting purpose-driven youth to international volunteering opportunities.</p><span class="tags"><span class="pill">Campaign Design</span><span class="pill">Social Media</span><span class="pill">AIESEC</span></span><span class="pj-more">View project <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+</a>
+<a class="pj-card" href="/public/nlds" data-cat="branding" data-cursor="View">
+  <span class="pj-fig"><span class="pj-mask"><img src="../Assets/Registration%20reminder%201.png" width="1000" height="625" alt="Crafting a Standout Marketing Application" loading="lazy"></span><span class="pill fill pj-badge">Branding</span></span>
+  <span class="pj-body"><span class="pj-cat">Personal Branding</span><h2 class="display">Crafting a Standout Marketing Application</h2><p class="d">Designed a series of digital posts as part of my application to AIESEC in Sri Lanka&#x27;s marketing team, showcasing my creativity, visual communication, and understanding of campaign-driven content.</p><span class="tags"><span class="pill">Personal Branding</span><span class="pill">Digital Design</span><span class="pill">Content</span></span><span class="pj-more">View project <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+</a>
+<a class="pj-card" href="/public/catalyst" data-cat="event" data-cursor="View">
+  <span class="pj-fig"><span class="pj-mask"><img src="../Assets/Toph%20Post.png" width="1000" height="625" alt="Inspiring Leadership Through Experience" loading="lazy"></span><span class="pill fill pj-badge">Event</span></span>
+  <span class="pj-body"><span class="pj-cat">Event Promotion</span><h2 class="display">Inspiring Leadership Through Experience</h2><p class="d">Designed promotional content for Catalyst 5.0, AIESEC in SLIIT&#x27;s Leadership Development Seminar, focused on engaging participants and driving attendance through cohesive visual storytelling.</p><span class="tags"><span class="pill">Event Design</span><span class="pill">Visual Storytelling</span><span class="pill">Promotion</span></span><span class="pj-more">View project <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+</a>
+<a class="pj-card" href="/public/goldcoin" data-cat="corporate" data-cursor="View">
+  <span class="pj-fig"><span class="pj-mask"><img src="../Assets/goldcoinv4.png" width="1000" height="625" alt="Communicating Prestige Through Design" loading="lazy"></span><span class="pill fill pj-badge">Corporate</span></span>
+  <span class="pj-body"><span class="pj-cat">Corporate Communications</span><h2 class="display">Communicating Prestige Through Design</h2><p class="d">Developed flyers and email banners for A Company&#x27;s Gold Coin Award Ceremony, supporting event communication by presenting the agenda and announcements with clarity and visual consistency.</p><span class="tags"><span class="pill">Corporate Design</span><span class="pill">Print</span><span class="pill">Email Banners</span></span><span class="pj-more">View project <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+</a>
+<a class="pj-card" href="/public/merch" data-cat="branding" data-cursor="View">
+  <span class="pj-fig"><span class="pj-mask"><img src="../Assets/merchandising.png" width="1000" height="625" alt="Bringing Identity to Life Through Merchandise Design" loading="lazy"></span><span class="pill fill pj-badge">Jackets</span></span>
+  <span class="pj-body"><span class="pj-cat">Brand &amp; Merchandising</span><h2 class="display">Bringing Identity to Life Through Merchandise Design</h2><p class="d">Designed a range of merchandise including t-shirts and jackets, translating brand identity into wearable designs for events, membership, and personal creative exploration.</p><span class="tags"><span class="pill">Merchandising</span><span class="pill">Brand Identity</span><span class="pill">Print</span></span><span class="pj-more">View project <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+</a>
     </div>
   </section>
+  <section class="cta light" id="contact" data-theme="lime">
+    <div class="cta-dome" aria-hidden="true"></div>
+    <h2 class="cta-title display" aria-label="Let’s build something that truly connects">
+      <span class="line"><span class="li">Let’s build</span></span><span class="line"><span class="li">something</span></span><span class="line"><span class="li">that truly</span></span><span class="line"><span class="li">connects</span></span>
+    </h2>
+    <a class="magnet magnetic" href="/public/contactme"><span>Say hello <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </section>
 
-  <!-- FILTER BAR -->
-  <div class="filter-wrap">
-    <div class="filter-inner">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="campaign">Campaigns</button>
-      <button class="filter-btn" data-filter="branding">Branding</button>
-      <button class="filter-btn" data-filter="event">Events</button>
-      <button class="filter-btn" data-filter="corporate">Corporate</button>
-    </div>
-  </div>
+</main>
 
-  <!-- PROJECTS GRID -->
-  <main class="projects-wrap">
-    <div class="projects-grid" id="projects-grid">
+<footer class="foot">
+  <span>&copy; 2026 Yohan Wickramasinghe</span>
+  <ul>
+    <li><a href="/public/aboutme">About Me</a></li>
+    <li><a href="/public/projects">Projects</a></li>
+    <li><a href="/public/blogs">Blogs</a></li>
+    <li><a href="/public/contactme">Contact me</a></li>
+  </ul>
+  <button type="button" id="toTop">Back to top</button>
+</footer>
 
-      <!-- EDIT: Add or remove .project-item blocks to update your projects.
-           data-category must match one of the filter-btn data-filter values above. -->
-
-    <a href="igvirnm.html" class="project-link">
-      <div class="project-item reveal" data-category="campaign">
-        <div class="project-thumb th-a">
-          <div class="thumb-chip">AIESEC in SLIIT</div>
-          <!-- EDIT: Replace with your actual image -->
-          <img src="../Assets/featuredv4.png" alt="Driving Global Impact Through Youth Exchange">
-          <div class="project-overlay">
-            <span>View project →</span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-cat">Attraction Campaigns</span>
-            <span class="project-badge badge-orange">Featured</span>
-          </div>
-          <div class="project-title">Driving Global Impact Through Youth Exchange</div>
-          <div class="project-desc">Designed and executed attraction campaigns for iGV IR & M at AIESEC in SLIIT, connecting purpose-driven youth to international volunteering opportunities.</div>
-          <div class="project-tags">
-            <span class="tag">Campaign Design</span>
-            <span class="tag">Social Media</span>
-            <span class="tag">AIESEC</span>
-          </div>
-        </div>
-      </div>
-      </a>
-<a href="nlds.html" class="project-link">
-      <div class="project-item reveal" data-category="branding">
-        <div class="project-thumb th-b">
-          <div class="thumb-chip">AIESEC in Sri Lanka</div>
-          <img src="../Assets/Registration reminder 1.png" alt="Crafting a Standout Marketing Application">
-          <div class="project-overlay">
-            <span>View project →</span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-cat">Personal Branding</span>
-            <span class="project-badge badge-violet">Branding</span>
-          </div>
-          <div class="project-title">Crafting a Standout Marketing Application</div>
-          <div class="project-desc">Designed a series of digital posts as part of my application to AIESEC in Sri Lanka's marketing team, showcasing my creativity, visual communication, and understanding of campaign-driven content.</div>
-          <div class="project-tags">
-            <span class="tag">Personal Branding</span>
-            <span class="tag">Digital Design</span>
-            <span class="tag">Content</span>
-          </div>
-        </div>
-      </div>
-</a>
-<a href="catalyst.html" class="project-link">
-      <div class="project-item reveal" data-category="event">
-        <div class="project-thumb th-e">
-          <div class="thumb-chip">AIESEC in SLIIT</div>
-          <img src="../Assets/Toph Post.png" alt="Inspiring Leadership Through Experience">
-          <div class="project-overlay">
-            <span>View project →</span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-cat">Event Promotion</span>
-            <span class="project-badge badge-cyan">Event</span>
-          </div>
-          <div class="project-title">Inspiring Leadership Through Experience</div>
-          <div class="project-desc">Designed promotional content for Catalyst 5.0, AIESEC in SLIIT's Leadership Development Seminar, focused on engaging participants and driving attendance through cohesive visual storytelling.</div>
-          <div class="project-tags">
-            <span class="tag">Event Design</span>
-            <span class="tag">Visual Storytelling</span>
-            <span class="tag">Promotion</span>
-          </div>
-        </div>
-      </div>
-</a>
-<a href="goldcoin.html" class="project-link">
-      <div class="project-item reveal" data-category="corporate">
-        <div class="project-thumb th-c">
-          <div class="thumb-chip">Corporate Event</div>
-          <img src="../Assets/goldcoinv4.png" alt="Communicating Prestige Through Design">
-          <div class="project-overlay">
-            <span>View project →</span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-cat">Corporate Communications</span>
-            <span class="project-badge badge-orange">Corporate</span>
-          </div>
-          <div class="project-title">Communicating Prestige Through Design</div>
-          <div class="project-desc">Developed flyers and email banners for A Company's Gold Coin Award Ceremony, supporting event communication by presenting the agenda and announcements with clarity and visual consistency.</div>
-          <div class="project-tags">
-            <span class="tag">Corporate Design</span>
-            <span class="tag">Print</span>
-            <span class="tag">Email Banners</span>
-          </div>
-        </div>
-      </div>
-</a>
-<a href="merch.html" class="project-link">
-      <div class="project-item reveal" data-category="branding">
-        <div class="project-thumb th-d">
-          <div class="thumb-chip">Merchandising</div>
-          <img src="../Assets/merchandising.png" alt="Bringing Brand Identity to Life">
-          <div class="project-overlay">
-            <span>View project →</span>
-          </div>
-        </div>
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-cat">Brand &amp; Merchandising</span>
-            <span class="project-badge badge-violet">Jackets</span>
-          </div>
-          <div class="project-title">Bringing Identity to Life Through Merchandise Design</div>
-          <div class="project-desc">Designed a range of merchandise including t-shirts and jackets, translating brand identity into wearable designs for events, membership, and personal creative exploration.</div>
-          <div class="project-tags">
-            <span class="tag">Merchandising</span>
-            <span class="tag">Brand Identity</span>
-            <span class="tag">Print</span>
-          </div>
-        </div>
-      </div>
-</a>
-    </div>
-
-    <!-- Empty state — shown when filter has no results -->
-    <div class="empty-state" id="empty-state" style="display:none">
-      <div class="empty-icon">◎</div>
-      <div class="empty-text">No projects in this category yet.</div>
-    </div>
-
-  </main>
-
-  <!-- CONTACT STRIP -->
-  <div class="contact-wrap reveal">
-    <div class="contact-inner">
-      <h2>Got a project in mind? <span><br>Let's talk.</span></h2>
-      <a href="contact.html" class="contact-email">Get in touch →</a>
-    </div>
-  </div>
-
-  <footer>
-    <span>© 2026 Yohan Wickramasinghe</span>
-  </footer>
-
-  <script src="../JS/projects.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="../JS/projects.js"></script>
+<script src="../JS/site.js"></script>
 </body>
 </html>

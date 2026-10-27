@@ -1,254 +1,268 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yohan Wickramasinghe - Graphic Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Cabinet+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/index.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yohan Wickramasinghe | Graphic Designer</title>
+<meta name="description" content="Yohan Wickramasinghe is a graphic designer who creates social media posts and brand content built around people.">
+<meta name="theme-color" content="#070707">
+<meta property="og:title" content="Yohan Wickramasinghe | Graphic Designer">
+<meta property="og:description" content="Yohan Wickramasinghe is a graphic designer who creates social media posts and brand content built around people.">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico">
+<script>
+(function(){var d=document.documentElement;d.classList.add('js');
+try{if(sessionStorage.getItem('ywSeen'))d.classList.add('no-pre');
+if(sessionStorage.getItem('ywNav')==='1'){d.classList.add('is-entering');setTimeout(function(){d.classList.remove('is-entering')},4000)}}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/site.css">
+<link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
+<div class="preloader" aria-hidden="true">
+  <div class="pre-top"><span>YW.</span><span>Graphic designer</span></div>
+  <div class="pre-count"><span class="pre-num">0</span><small>%</small></div>
+</div>
+<div class="curtain" aria-hidden="true"></div>
+<div class="scrollbar" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-bubble" aria-hidden="true"></div>
 
-  <!-- NAV -->
-  <nav>
-    <div class="logo">YW<span>.</span></div>
-    <ul class="nav-links">
-      <li><a href="Public/aboutme.html">About Me</a></li>
-      <li><a href="/Public/projects.html">Projects</a></li>
-       <li><a href="/Public/blogs.html">Blogs</a></li>
-    </ul>
-    <a href="/Public/contactme.html" class="nav-btn">Contact me</a>
-    <!-- Hamburger — visible on mobile only -->
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<header class="nav" id="nav">
+  <a class="logo" href="/" aria-label="Yohan Wickramasinghe, home">YW<span>.</span></a>
+  <nav aria-label="Main">
+    <ul class="nav-links"><li><a href="/public/aboutme">About Me</a></li><li><a href="/public/projects">Projects</a></li><li><a href="/public/blogs">Blogs</a></li></ul>
   </nav>
+  <a class="nav-btn" href="/public/contactme">Contact me</a>
+  <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</header>
 
-  <!-- Mobile menu overlay -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <ul class="mobile-nav-links">
-        <li><a href="Public/aboutme.html" class="mobile-link">About Me</a></li>
-        <li><a href="Public/projects.html" class="mobile-link">Projects</a></li>
-        <li><a href="Public/blogs.html" class="mobile-link">Blogs</a></li>
-      </ul>
-      <a href="Public/contactme.html" class="mobile-cta">Contact me</a>
-    </div>
-  </div>
+<div class="menu" id="menu" aria-hidden="true">
+  <ul><li><a href="/public/aboutme">About Me</a></li><li><a href="/public/projects">Projects</a></li><li><a href="/public/blogs">Blogs</a></li><li><a href="/public/contactme">Contact me</a></li></ul>
+  <p>Graphic designer</p>
+</div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg">
-      <div class="orb orb1"></div>
-      <div class="orb orb2"></div>
+<main>
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="top" data-theme="ink">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="blob b1"></div><div class="blob b2"></div><div class="halftone"></div>
     </div>
-    <div class="hero-inner">
-      <div class="hero-eyebrow">
-        <span class="eyebrow-dot"></span>
-        Graphic Designer
-      </div>
-      <h1>
-        <span class="line"><span class="word">Visual</span></span>
-        <span class="line"><span class="word grad-text">experiences</span></span>
-        <span class="line"><span class="word">that inspire.</span></span>
+
+    <div class="title-wrap">
+      <h1 class="hero-title kinetic" aria-label="Visual experiences that inspire.">
+        <span class="line l1" aria-hidden="true"><span class="word">Visual</span></span>
+        <span class="line l2" aria-hidden="true"><span class="word">Experiences</span></span>
+        <span class="line l3" aria-hidden="true"><span class="word">That</span><span class="word">Inspire.</span></span>
       </h1>
-      <p class="hero-sub">I design social media posts and brand content built around people, not just to present information.</p>
-      <div class="hero-ctas">
-        <a href="/Public/projects.html" class="cta-primary">See my work</a>
-        <a href="/Public/contactme.html" class="cta-ghost">Get in touch →</a>
+
+      <figure class="float f2" data-depth=".55" aria-hidden="true"><span class="float-in"><img src="Assets/Registration%20reminder%201.png" width="1080" height="1350" alt=""></span></figure>
+      <figure class="float f3" data-depth=".9" aria-hidden="true"><span class="float-in"><img src="Assets/Toph%20Post.png" width="1080" height="1080" alt=""></span></figure>
+      <figure class="float f1" data-depth=".7" aria-hidden="true">
+        <span class="float-in"><img src="Assets/featuredv4.png" width="1000" height="500" alt=""></span>
+        <div class="stamp">
+          <svg class="stamp-ring" viewBox="0 0 120 120">
+            <defs><path id="ring" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+            <text font-size="10" font-weight="800" fill="currentColor" textLength="270" lengthAdjust="spacing"><textPath href="#ring">Graphic designer * Portfolio 2026 *</textPath></text>
+          </svg>
+          <svg class="stamp-ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+        </div>
+      </figure>
+    </div>
+
+    <div class="hero-foot">
+      <div>
+        <p class="role">Graphic designer</p>
+        <p class="lede">I design social media posts and brand content built around people, not just to present information.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid magnetic" href="/public/projects"><span>See my work</span></a>
+          <a class="btn btn-line magnetic" href="/public/contactme"><span>Get in touch</span>
+            <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="num">10+</div>
-          <div class="lbl">Campaigns</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="num">3</div>
-          <div class="lbl">Years experience</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="num">91%</div>
-          <div class="lbl">Avg. completion rate</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="num">5</div>
-          <div class="lbl">Brands worked with</div>
-        </div>
+      <div class="stats">
+        <div class="stat"><b data-to="10" data-suffix="+">10+</b><span>Campaigns</span></div>
+        <div class="stat"><b data-to="3" data-suffix="">3</b><span>Years experience</span></div>
+        <div class="stat"><b data-to="91" data-suffix="%">91%</b><span>Average completion rate</span></div>
+        <div class="stat"><b data-to="5" data-suffix="">5</b><span>Brands worked with</span></div>
       </div>
     </div>
   </section>
 
-  <!-- MARQUEE -->
-  <div class="marquee-wrap">
-    <div class="marquee-track">
-      <span class="marquee-item">Adobe Photoshop</span>
-      <span class="marquee-item">Canva</span>
-      <span class="marquee-item">Figma</span>
-      <span class="marquee-item">Adobe Illustrator</span>
-      <span class="marquee-item">Instructional Design</span>
-      <span class="marquee-item">Brand Identity</span>
-      <span class="marquee-item">Merchandising</span>
-      <span class="marquee-item">Adobe Photoshop</span>
-      <span class="marquee-item">Canva</span>
-      <span class="marquee-item">Figma</span>
-      <span class="marquee-item">Adobe Illustrator</span>
-      <span class="marquee-item">Instructional Design</span>
-      <span class="marquee-item">Brand Identity</span>
-      <span class="marquee-item">Merchandising</span>
+  <!-- ========== SKILLS BAND ========== -->
+  <div class="band-wrap" aria-label="Tools and skills">
+    <div class="band" aria-hidden="true">
+      <div class="band-track">
+        <div class="band-group">
+          <span>Adobe Photoshop</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+          <span>Canva</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+          <span>Figma</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+          <span>Adobe Illustrator</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+          <span>Instructional design</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+          <span>Brand identity</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+          <span>Merchandising</span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- WORK -->
-  <div class="content-wrap">
-    <section class="section" id="work">
-      <div class="work-header reveal">
-        <div>
-          <div class="sec-label">Selected work</div>
-          <div class="sec-title">Projects I'm proud of</div>
-        </div>
-        <a href="/Public/projects.html" class="view-all">View all work →</a>
-      </div>
+  <!-- ========== WORK ========== -->
+  <section class="work light" id="work" data-theme="paper">
+    <div class="work-pin">
+      <div class="work-track">
 
-      <div class="works-grid reveal">
-
-        <div class="work-card featured">
-            <a href="/Public/igvirnm.html" class="card-link"></a>
-
-          <div class="thumb th-a">
-            <div class="thumb-chip">AIESEC in SLIIT</div>
-            <div class="thumb-glyph"><img src="Assets/featuredv4.png"></div>
-          </div>
-          <div class="work-body">
-            <div class="work-meta">
-              <span class="work-cat">Attraction Campaigns</span>
-              <span class="work-badge badge-orange">Featured</span>
-            </div>
-            <div class="work-title">Driving Global Impact Through Youth Exchange</div>
-            <div class="work-desc">Designed and executed attraction campaigns for iGV IR & M at AIESEC in SLIIT, connecting purpose-driven youth to international volunteering opportunities.</div>
-          </div>
-          <div class="work-arrow">→</div>
+        <div class="w-intro">
+          <h2 class="display" aria-label="Projects I’m proud of">
+            <span class="line"><span class="li">Projects</span></span>
+            <span class="line"><span class="li">I’m proud</span></span>
+            <span class="line"><span class="li">of</span></span>
+          </h2>
+          <p>Five projects, from youth exchange to event promotion to merchandise. Keep scrolling to move through them.</p>
+          <a class="w-all" href="/public/projects"><span>View all work</span>
+            <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
 
-        <div class="work-card">
-          <a href="/Public/nlds.html" class="card-link"></a>
-          <div class="thumb th-b">
-            <div class="thumb-chip">AIESEC in Sri Lanka</div>
-            <div class="thumb-glyph"><img src="Assets/Registration reminder 1.png"></div>
+        <article class="w-panel" data-cursor="View">
+          <span class="ghost" aria-hidden="true">iGV</span>
+          <a class="w-frame" href="/public/igvirnm" style="--ar:2/1" aria-label="Driving Global Impact Through Youth Exchange">
+            <span class="w-mask"><img class="w-img" src="Assets/featuredv4.png" width="1000" height="500" alt="Attraction campaign posts for AIESEC in SLIIT, promoting international volunteering"></span>
+          </a>
+          <div class="w-copy">
+            <p class="w-client">AIESEC in SLIIT</p>
+            <div class="tags"><span class="pill fill">Featured</span><span class="pill">Attraction campaigns</span></div>
+            <h3 class="display">Driving Global Impact Through Youth Exchange</h3>
+            <p class="d">Designed and executed attraction campaigns for iGV IR &amp; M at AIESEC in SLIIT, connecting purpose-driven youth to international volunteering opportunities.</p>
+            <a class="w-link" href="/public/igvirnm"><span>View project</span><i><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
           </div>
-          <div class="work-body">
-            <div class="work-meta">
-              <span class="work-cat">Personal Branding</span>
-              <span class="work-badge badge-purple">NLDS</span>
-            </div>
-            <div class="work-title">Crafting a Standout Marketing Application</div>
-            <div class="work-desc">Designed a series of digital posts as part of my application to AIESEC in Sri Lanka's marketing team, showcasing my creativity, visual communication, and understanding of campaign-driven content.</div>
-          </div>
-          <div class="work-arrow">→</div>
-        </div>
+        </article>
 
-        <div class="work-card">
-          <a href="/Public/catalyst.html" class="card-link"></a>
-          <div class="thumb th-e">
-            <div class="thumb-chip">AIESEC in SLIIT</div>
-            <div class="thumb-glyph"><img src="Assets/Toph Post.png"></div>
+        <article class="w-panel" data-cursor="View">
+          <span class="ghost" aria-hidden="true">NLDS</span>
+          <a class="w-frame" href="/public/nlds" style="--ar:4/5" aria-label="Crafting a Standout Marketing Application">
+            <span class="w-mask"><img class="w-img" src="Assets/Registration%20reminder%201.png" width="1080" height="1350" alt="Registration reminder post from a digital post series for an AIESEC in Sri Lanka marketing application"></span>
+          </a>
+          <div class="w-copy">
+            <p class="w-client">AIESEC in Sri Lanka</p>
+            <div class="tags"><span class="pill">Personal branding</span></div>
+            <h3 class="display">Crafting a Standout Marketing Application</h3>
+            <p class="d">Designed a series of digital posts as part of my application to AIESEC in Sri Lanka's marketing team, showcasing my creativity, visual communication, and understanding of campaign-driven content.</p>
+            <a class="w-link" href="/public/nlds"><span>View project</span><i><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
           </div>
-          <div class="work-body">
-            <div class="work-meta">
-              <span class="work-cat">Event Promotion</span>
-              <span class="work-badge badge-cyan">Cat 5.0</span>
-            </div>
-            <div class="work-title">Inspiring Leadership Through Experience</div>
-            <div class="work-desc">Designed promotional content for Catalyst 5.0, AIESEC in SLIIT's Leadership Development Seminar, focused on engaging participants and driving attendance through cohesive visual storytelling.</div>
-          </div>
-          <div class="work-arrow">→</div>
-        </div>
+        </article>
 
-        <div class="work-card">
-          <a href="/Public/goldcoin.html" class="card-link"></a>
-          <div class="thumb th-c">
-            <div class="thumb-chip">Corporate Event</div>
-            <div class="thumb-glyph"><img src="Assets/goldcoinv4.png"></div>
+        <article class="w-panel" data-cursor="View">
+          <span class="ghost" aria-hidden="true">Cat 5.0</span>
+          <a class="w-frame" href="/public/catalyst" style="--ar:1/1" aria-label="Inspiring Leadership Through Experience">
+            <span class="w-mask"><img class="w-img" src="Assets/Toph%20Post.png" width="1080" height="1080" alt="Promotional post for Catalyst 5.0, a leadership development seminar"></span>
+          </a>
+          <div class="w-copy">
+            <p class="w-client">AIESEC in SLIIT</p>
+            <div class="tags"><span class="pill">Event promotion</span></div>
+            <h3 class="display">Inspiring Leadership Through Experience</h3>
+            <p class="d">Designed promotional content for Catalyst 5.0, AIESEC in SLIIT's Leadership Development Seminar, focused on engaging participants and driving attendance through cohesive visual storytelling.</p>
+            <a class="w-link" href="/public/catalyst"><span>View project</span><i><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
           </div>
-          <div class="work-body">
-            <div class="work-meta">
-              <span class="work-cat">Corporate Communications</span>
-              <span class="work-badge badge-orange">GC</span>
-            </div>
-            <div class="work-title">Communicating Prestige Through Design</div>
-            <div class="work-desc">Developed flyers and email banners for A Companiy's Gold Coin Award Ceremony, supporting event communication by presenting the agenda and announcements with clarity and visual consistency.</div>
-          </div>
-          <div class="work-arrow">→</div>
-        </div>
+        </article>
 
-        <div class="work-card">
-           <a href="/Public/merch.html" class="card-link"></a>
-          <div class="thumb th-d">
-            <div class="thumb-chip">Merchandising</div>
-            <div class="thumb-glyph"><img src="Assets/merchandising.png"></div>
+        <article class="w-panel" data-cursor="View">
+          <span class="ghost" aria-hidden="true">GC</span>
+          <a class="w-frame" href="/public/goldcoin" style="--ar:9/5" aria-label="Communicating Prestige Through Design">
+            <span class="w-mask"><img class="w-img" src="Assets/goldcoinv4.png" width="540" height="300" alt="Flyer and email banner for the Gold Coin Award Ceremony"></span>
+          </a>
+          <div class="w-copy">
+            <p class="w-client">Corporate event</p>
+            <div class="tags"><span class="pill">Corporate communications</span></div>
+            <h3 class="display">Communicating Prestige Through Design</h3>
+            <p class="d">Developed flyers and email banners for the Gold Coin Award Ceremony, supporting event communication by presenting the agenda and announcements with clarity and visual consistency.</p>
+            <a class="w-link" href="/public/goldcoin"><span>View project</span><i><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
           </div>
-          <div class="work-body">
-            <div class="work-meta">
-              <span class="work-cat">Brand &amp; Merchandising</span>
-              <span class="work-badge badge-purple">Jackets</span>
-            </div>
-            <div class="work-title">Bringing Identity to Life Through Merchandise Design</div>
-            <div class="work-desc">Designed a range of merchandise including t-shirts and jackets, translating brand identity into wearable designs for events, membership, and personal creative exploration.</div>
+        </article>
+
+        <article class="w-panel" data-cursor="View">
+          <span class="ghost" aria-hidden="true">Jackets</span>
+          <a class="w-frame" href="/public/merch" style="--ar:9/5" aria-label="Bringing Identity to Life Through Merchandise Design">
+            <span class="w-mask"><img class="w-img" src="Assets/merchandising.png" width="540" height="300" alt="T-shirt and jacket merchandise designs"></span>
+          </a>
+          <div class="w-copy">
+            <p class="w-client">Merchandising</p>
+            <div class="tags"><span class="pill">Brand &amp; merchandising</span></div>
+            <h3 class="display">Bringing Identity to Life Through Merchandise Design</h3>
+            <p class="d">Designed a range of merchandise including t-shirts and jackets, translating brand identity into wearable designs for events, membership, and personal creative exploration.</p>
+            <a class="w-link" href="/public/merch"><span>View project</span><i><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
           </div>
-          <div class="work-arrow">→</div>
-        </div>
+        </article>
 
       </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section class="section" id="process">
-      <div class="reveal">
-        <div class="sec-label">How I work</div>
-        <div class="sec-title">The journey behind<br>every project</div>
-        <div class="sec-sub">I approach every project with a balance of creativity and strategy, ensuring each design is not only visually strong but also purposeful and aligned with its audience.</div>
-      </div>
-      <div class="timeline">
-        <div class="tl-step reveal reveal-delay-1">
-          <div class="tl-dot">01</div>
-          <div class="tl-title">Understand</div>
-          <div class="tl-text">Getting clear on the goal, the audience, and the message that needs to be communicated.</div>
-        </div>
-        <div class="tl-step reveal reveal-delay-2">
-          <div class="tl-dot">02</div>
-          <div class="tl-title">Conceptualise</div>
-          <div class="tl-text">Exploring ideas, visual directions, and creative approaches before moving into execution.</div>
-        </div>
-        <div class="tl-step reveal reveal-delay-3">
-          <div class="tl-dot">03</div>
-          <div class="tl-title">Design</div>
-          <div class="tl-text">Bringing concepts to life through digital content, branding, and visual assets with a focus on clarity and consistency.</div>
-        </div>
-        <div class="tl-step reveal reveal-delay-4">
-          <div class="tl-dot">04</div>
-          <div class="tl-title">Refine</div>
-          <div class="tl-text">Iterating based on feedback, improving details, and ensuring the final output delivers impact.</div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- CONTACT -->
-  <div class="contact-wrap reveal" id="contact">
-    <div class="contact-inner">
-      <h2>Let’s build something <span>that truly connects</span></h2>
-      <a href="/Public/contactme.html" class="contact-email">Say hello →</a>
+      <div class="w-progress" aria-hidden="true"><i></i></div>
     </div>
-  </div>
+  </section>
 
-  <footer>
-    <span>© 2026 Yohan Wickramasinghe</span>
-  </footer>
+  <!-- ========== PROCESS ========== -->
+  <section class="process" id="process" data-theme="ink">
+    <div class="p-pin">
+      <div class="p-head">
+        <h2 class="display" aria-label="The journey behind every project">
+          <span class="line"><span class="li">The journey behind</span></span>
+          <span class="line"><span class="li">every project</span></span>
+        </h2>
+        <p>I approach every project with a balance of creativity and strategy, ensuring each design is not only visually strong but also purposeful and aligned with its audience.</p>
+      </div>
+      <div class="p-stage">
+        <div class="p-words" aria-hidden="true">
+          <span class="p-word">Understand</span>
+          <span class="p-word">Conceptualise</span>
+          <span class="p-word">Design</span>
+          <span class="p-word">Refine</span>
+        </div>
+        <ol class="p-steps">
+          <i class="p-line" aria-hidden="true"></i>
+          <li class="p-step is-on"><button type="button"><span class="n">01</span><h3>Understand</h3></button>
+            <div class="desc"><div><p>Getting clear on the goal, the audience, and the message that needs to be communicated.</p></div></div></li>
+          <li class="p-step"><button type="button"><span class="n">02</span><h3>Conceptualise</h3></button>
+            <div class="desc"><div><p>Exploring ideas, visual directions, and creative approaches before moving into execution.</p></div></div></li>
+          <li class="p-step"><button type="button"><span class="n">03</span><h3>Design</h3></button>
+            <div class="desc"><div><p>Bringing concepts to life through digital content, branding, and visual assets with a focus on clarity and consistency.</p></div></div></li>
+          <li class="p-step"><button type="button"><span class="n">04</span><h3>Refine</h3></button>
+            <div class="desc"><div><p>Iterating based on feedback, improving details, and ensuring the final output delivers impact.</p></div></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
-  <script src="js/index.js"></script>
+  <!-- ========== CTA ========== -->
+  <section class="cta light" id="contact" data-theme="lime">
+    <div class="cta-dome" aria-hidden="true"></div>
+    <h2 class="cta-title display" aria-label="Let’s build something that truly connects">
+      <span class="line"><span class="li">Let’s build</span></span>
+      <span class="line"><span class="li">something</span></span>
+      <span class="line"><span class="li">that truly</span></span>
+      <span class="line"><span class="li">connects</span></span>
+    </h2>
+    <a class="magnet magnetic" href="/public/contactme"><span>Say hello
+      <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>&copy; 2026 Yohan Wickramasinghe</span>
+  <ul>
+    <li><a href="/public/aboutme">About Me</a></li>
+    <li><a href="/public/projects">Projects</a></li>
+    <li><a href="/public/blogs">Blogs</a></li>
+    <li><a href="/public/contactme">Contact me</a></li>
+  </ul>
+  <button type="button" id="toTop">Back to top</button>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="JS/index.js"></script>
+<script src="JS/site.js"></script>
 </body>
 </html>

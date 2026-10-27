@@ -1,275 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blogs - Yohan Wickramasinghe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Cabinet+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/blogs.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blogs | Yohan Wickramasinghe</title>
+<meta name="description" content="Articles on marketing, design and creativity, published on Medium.">
+<meta name="theme-color" content="#070707">
+<meta property="og:title" content="Blogs | Yohan Wickramasinghe">
+<meta property="og:description" content="Articles on marketing, design and creativity, published on Medium.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../favicon.ico">
+<script>
+(function(){var d=document.documentElement;d.classList.add('js');
+try{if(sessionStorage.getItem('ywSeen'))d.classList.add('no-pre');
+if(sessionStorage.getItem('ywNav')==='1'){d.classList.add('is-entering');setTimeout(function(){d.classList.remove('is-entering')},4000)}}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/site.css">
+<link rel="stylesheet" href="../CSS/blogs.css">
 </head>
 <body>
+<div class="curtain" aria-hidden="true"></div>
+<div class="scrollbar" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-bubble" aria-hidden="true"></div>
 
-  <!-- NAV -->
-  <nav>
-    <a href="../index.html" class="logo">YW<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="aboutme.html">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blogs.html" class="active">Blogs</a></li>
-    </ul>
-    <a href="contactme.html" class="nav-btn">Contact me</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<header class="nav" id="nav">
+  <a class="logo" href="/" aria-label="Yohan Wickramasinghe, home">YW<span>.</span></a>
+  <nav aria-label="Main">
+    <ul class="nav-links"><li><a href="/public/aboutme">About Me</a></li><li><a href="/public/projects">Projects</a></li><li><a href="/public/blogs" aria-current="page">Blogs</a></li></ul>
   </nav>
+  <a class="nav-btn" href="/public/contactme">Contact me</a>
+  <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</header>
 
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <ul class="mobile-nav-links">
-        <li><a href="aboutme.html" class="mobile-link">About Me</a></li>
-        <li><a href="projects.html" class="mobile-link">Projects</a></li>
-        <li><a href="blogs.html" class="mobile-link active">Blogs</a></li>
-      </ul>
-      <a href="contactme.html" class="mobile-cta">Contact me</a>
-    </div>
-  </div>
+<div class="menu" id="menu" aria-hidden="true">
+  <ul><li><a href="/public/aboutme">About Me</a></li><li><a href="/public/projects">Projects</a></li><li><a href="/public/blogs" aria-current="page">Blogs</a></li><li><a href="/public/contactme">Contact me</a></li></ul>
+  <p>Graphic designer</p>
+</div>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="hero-bg">
-      <div class="orb orb1"></div>
-      <div class="orb orb2"></div>
-    </div>
-    <div class="page-hero-inner">
-      <div class="hero-eyebrow">
-        <span class="eyebrow-dot"></span>
-        Medium Articles
-      </div>
-      <h1>More than<br><span class="grad-text">just design</span></h1>
-      <p class="hero-sub">Thoughts on marketing, leadership, and creativity, written to explore ideas that matter.</p>
-    </div>
+<main>
+  <header class="page-hero" data-theme="ink">
+    <div class="hero-bg" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="halftone"></div></div>
+    <h1 class="page-title kinetic" aria-label="More than just design"><span class="line" aria-hidden="true"><span class="word">More</span><span class="word">than</span></span><span class="line" aria-hidden="true"><span class="word">just</span><span class="word">design</span></span></h1>
+    <p class="page-sub" data-intro>Thoughts on marketing, leadership, and creativity, written to explore ideas that matter.</p>
+  </header>
+  <section class="bl-wrap light" data-theme="paper" aria-label="Articles">
+    <a class="bl-feature" href="https://medium.com/@yohanwick17/why-messy-design-is-winning-in-2026-the-rise-of-the-anti-ai-aesthetic-9c04bc798359" target="_blank" rel="noopener" data-cursor="Read">
+  <div class="bl-fig"><div class="bl-mask" data-wipe><img src="../Assets/medium1.png" width="1200" height="750" alt="Cover image for Why “Messy” Design is Winning in 2026: The Rise of the Anti-AI Aesthetic" loading="lazy"></div></div>
+  <div><p class="bl-meta"><span class="pill fill">Featured</span><span>Apr 2026</span><span>4 min read</span></p>
+  <h2 class="display">Why “Messy” Design is Winning in 2026: The Rise of the Anti-AI Aesthetic</h2><p class="ex">Stop chasing the grid. Why &quot;Imperfect by Design&quot; is the top marketing trend of 2026. Read the breakdown here.</p><div class="tags" style="margin-top:1.1rem"><span class="pill" style="border-color:var(--ink)">Design Trends</span><span class="pill" style="border-color:var(--ink)">Branding</span><span class="pill" style="border-color:var(--ink)">UX Design</span></div></div>
+</a>
+    <ul class="bl-list">
+<li data-rule class="bl-line-li"><a class="bl-row" href="https://medium.com/p/75d0929265a4" target="_blank" rel="noopener">
+  <span class="bl-date">Apr 2026<br>3 min read</span>
+  <span><h3>The Architecture of Attention: Why Culture is Your Strongest Marketing Lever</h3><p class="ex">Designing for the local brain. Why engineering &quot;human signals&quot; and cultural levers beats AI perfection for reach and trust in 2026.</p><span class="tags"><span class="pill">Marketing Strategy</span><span class="pill">User Experience</span><span class="pill">Culture</span></span></span>
+  <span class="bl-thumb"><img src="../Assets/medium2.png" width="400" height="300" alt="" loading="lazy"></span>
+  <span class="bl-go"><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+</a></li>
+<li data-rule class="bl-line-li"><a class="bl-row" href="https://medium.com/@yohanwick17/the-labyrinth-blueprint-why-the-funnel-is-a-20th-century-relic-660fd1f90cb6" target="_blank" rel="noopener">
+  <span class="bl-date">Apr 2026<br>3 min read</span>
+  <span><h3>The Labyrinth Blueprint: Why the Funnel is a 20th Century Relic</h3><p class="ex">Ditching the pipe for the ecosystem. 🌀 Why the linear funnel is a relic and how to design &quot;labyrinths&quot; for the chaotic buyer in 2026.</p><span class="tags"><span class="pill">Marketing Strategy</span><span class="pill">Psychology</span><span class="pill">User Experience</span></span></span>
+  <span class="bl-thumb"><img src="../Assets/medium3.png" width="400" height="300" alt="" loading="lazy"></span>
+  <span class="bl-go"><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+</a></li>
+<li data-rule class="bl-line-li"><a class="bl-row" href="https://medium.com/@yohanwick17/the-art-of-the-hijack-why-shot-on-faber-castell-is-a-strategic-masterpiece-591095567364" target="_blank" rel="noopener">
+  <span class="bl-date">Apr 2026<br>4 min read</span>
+  <span><h3>The Art of the Hijack: Why ‘Shot on Faber-Castell’ is a Strategic Masterpiece</h3><p class="ex">How Faber-Castell hijacked the Apple aesthetic to prove that 400 hours of craft can beat a digital sensor. A study in cultural leverage. ✏️</p><span class="tags"><span class="pill">Marketing Strategy</span><span class="pill">Branding</span><span class="pill">Case Study</span></span></span>
+  <span class="bl-thumb"><img src="../Assets/medium4.png" width="400" height="300" alt="" loading="lazy"></span>
+  <span class="bl-go"><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+</a></li>
+<li data-rule class="bl-line-li"><a class="bl-row" href="https://medium.com/@yohanwick17/the-loophole-strategy-how-td-bank-hijacked-the-worlds-biggest-brands-b3d2fb2d8eda" target="_blank" rel="noopener">
+  <span class="bl-date">May 2026<br>4 min read</span>
+  <span><h3>The Loophole Strategy: How TD Bank Hijacked the World’s Biggest Brands</h3><p class="ex">How Ogilvy Canada helped TD Bank hijack Nike and Apple’s brand equity without asking for permission. A study in strategic framing. 🖼️📈</p><span class="tags"><span class="pill">Marketing Strategy</span><span class="pill">Branding</span><span class="pill">Creative Strategy</span></span></span>
+  <span class="bl-thumb"><img src="../Assets/medium5.png" width="400" height="300" alt="" loading="lazy"></span>
+  <span class="bl-go"><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+</a></li>
+    </ul>
+  </section>
+  <section class="medium" data-theme="ink">
+    <h2 class="display" data-lines><span class="line"><span class="li">All articles</span></span><span class="line"><span class="li">live on Medium</span></span></h2>
+    <div><p>Follow along for new pieces on marketing, design, and everything in between.</p><a class="btn btn-solid magnetic" href="https://medium.com/@yohanwick17" target="_blank" rel="noopener"><span>Follow on Medium</span><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </section>
+  <section class="cta light" id="contact" data-theme="lime">
+    <div class="cta-dome" aria-hidden="true"></div>
+    <h2 class="cta-title display" aria-label="Let’s build something that truly connects">
+      <span class="line"><span class="li">Let’s build</span></span><span class="line"><span class="li">something</span></span><span class="line"><span class="li">that truly</span></span><span class="line"><span class="li">connects</span></span>
+    </h2>
+    <a class="magnet magnetic" href="/public/contactme"><span>Say hello <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
   </section>
 
-  <!-- FILTER BAR -->
-  <div class="filter-wrap">
-    <div class="filter-inner">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="marketing">Marketing</button>
-      <button class="filter-btn" data-filter="design">Design</button>
-      <button class="filter-btn" data-filter="leadership">Leadership</button>
-      <button class="filter-btn" data-filter="personal">Personal</button>
-    </div>
-  </div>
+</main>
 
-  <!-- BLOGS GRID -->
-  <main class="blogs-wrap">
-    <div class="blogs-grid" id="blogs-grid">
+<footer class="foot">
+  <span>&copy; 2026 Yohan Wickramasinghe</span>
+  <ul>
+    <li><a href="/public/aboutme">About Me</a></li>
+    <li><a href="/public/projects">Projects</a></li>
+    <li><a href="/public/blogs">Blogs</a></li>
+    <li><a href="/public/contactme">Contact me</a></li>
+  </ul>
+  <button type="button" id="toTop">Back to top</button>
+</footer>
 
-      <!-- =============================================
-           EDIT: Add or remove .blog-item blocks below.
-           - data-category must match a filter-btn data-filter value
-           - Set data-url to your Medium article link
-           - Replace cover image src, title, excerpt, tags, date, read-time
-           ============================================= -->
-
-      <a href="https://medium.com/@yohanwick17/why-messy-design-is-winning-in-2026-the-rise-of-the-anti-ai-aesthetic-9c04bc798359" target="_blank" rel="noopener" class="blog-link" data-category="marketing">
-        <div class="blog-item reveal" data-category="marketing">
-          <div class="blog-thumb th-a">
-            <div class="thumb-chip">Marketing</div>
-            <img src="../Assets/medium1.png" alt="Why Attraction Campaigns Need Emotion First">
-            <div class="blog-overlay">
-              <span>Read on Medium →</span>
-            </div>
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta-row">
-              <span class="blog-cat">Marketing</span>
-              <span class="blog-badge badge-orange">Featured</span>
-            </div>
-            <div class="blog-title">Why “Messy” Design is Winning in 2026: The Rise of the Anti-AI Aesthetic</div>
-            <div class="blog-excerpt">Stop chasing the grid. Why "Imperfect by Design" is the top marketing trend of 2026. Read the breakdown here.</div>
-            <div class="blog-footer">
-              <span class="blog-date">Apr 2026</span>
-              <span class="blog-dot">·</span>
-              <span class="blog-read">4 min read</span>
-            </div>
-            <div class="blog-tags">
-              <span class="tag">Design Trends</span>
-              <span class="tag">Branding</span>
-              <span class="tag">UX Design</span>
-              <span class="tag">Creativity</span>
-              <span class="tag">Digital Marketing</span>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://medium.com/p/75d0929265a4" target="_blank" rel="noopener" class="blog-link" data-category="design">
-        <div class="blog-item reveal" data-category="marketing">
-          <div class="blog-thumb th-b">
-            <div class="thumb-chip">Marketing</div>
-            <img src="../Assets/medium2.png" alt="Visual Consistency Isn't Boring — It's Trust">
-            <div class="blog-overlay">
-              <span>Read on Medium →</span>
-            </div>
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta-row">
-              <span class="blog-cat">Branding</span>
-              <span class="blog-badge badge-violet">Marketing</span>
-            </div>
-            <div class="blog-title">The Architecture of Attention: Why Culture is Your Strongest Marketing Lever</div>
-            <div class="blog-excerpt">Designing for the local brain. Why engineering "human signals" and cultural levers beats AI perfection for reach and trust in 2026.</div>
-            <div class="blog-footer">
-              <span class="blog-date">Apr 2026</span>
-              <span class="blog-dot">·</span>
-              <span class="blog-read">3 min read</span>
-            </div>
-            <div class="blog-tags">
-              <span class="tag">Marketing Strategy</span>
-              <span class="tag">User Experience</span>
-              <span class="tag">Culture</span>
-              <span class="tag">Branding</span>
-              <span class="tag">Psychology</span>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://medium.com/@yohanwick17/the-labyrinth-blueprint-why-the-funnel-is-a-20th-century-relic-660fd1f90cb6" target="_blank" rel="noopener" class="blog-link" data-category="leadership">
-        <div class="blog-item reveal" data-category="personal">
-          <div class="blog-thumb th-e">
-            <div class="thumb-chip">Personal</div>
-            <img src="../Assets/medium3.png" alt="What AIESEC Taught Me About Leading Without Authority">
-            <div class="blog-overlay">
-              <span>Read on Medium →</span>
-            </div>
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta-row">
-              <span class="blog-cat">Personal</span>
-              <span class="blog-badge badge-cyan">Personal</span>
-            </div>
-            <div class="blog-title">The Labyrinth Blueprint: Why the Funnel is a 20th Century Relic</div>
-            <div class="blog-excerpt">Ditching the pipe for the ecosystem. 🌀 Why the linear funnel is a relic and how to design "labyrinths" for the chaotic buyer in 2026.</div>
-            <div class="blog-footer">
-              <span class="blog-date">Apr 2026</span>
-              <span class="blog-dot">·</span>
-              <span class="blog-read">3 min read</span>
-            </div>
-            <div class="blog-tags">
-              <span class="tag">Marketing Strategy</span>
-              <span class="tag">Psychology</span>
-              <span class="tag">User Experience</span>
-              <span class="tag">Branding</span>
-              <span class="tag">Creativity</span>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://medium.com/@yohanwick17/the-art-of-the-hijack-why-shot-on-faber-castell-is-a-strategic-masterpiece-591095567364" target="_blank" rel="noopener" class="blog-link" data-category="personal">
-        <div class="blog-item reveal" data-category="personal">
-          <div class="blog-thumb th-c">
-            <div class="thumb-chip">Personal</div>
-            <img src="../Assets/medium4.png" alt="On Applying for Things You're Not Sure You're Ready For">
-            <div class="blog-overlay">
-              <span>Read on Medium →</span>
-            </div>
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta-row">
-              <span class="blog-cat">Personal</span>
-              <span class="blog-badge badge-green">Case Study</span>
-            </div>
-            <div class="blog-title">The Art of the Hijack: Why ‘Shot on Faber-Castell’ is a Strategic Masterpiece</div>
-            <div class="blog-excerpt">How Faber-Castell hijacked the Apple aesthetic to prove that 400 hours of craft can beat a digital sensor. A study in cultural leverage. ✏️</div>
-            <div class="blog-footer">
-              <span class="blog-date">Apr 2026</span>
-              <span class="blog-dot">·</span>
-              <span class="blog-read">4 min read</span>
-            </div>
-            <div class="blog-tags">
-              <span class="tag">Marketing Strategy</span>
-              <span class="tag">Branding</span>
-              <span class="tag">Case Study</span>
-              <span class="tag">Creative Leadership</span>
-              <span class="tag">Design Thinking</span>
-            </div>
-          </div>
-        </div>
-      </a>
-
-      <a href="https://medium.com/@yohanwick17/the-loophole-strategy-how-td-bank-hijacked-the-worlds-biggest-brands-b3d2fb2d8eda" target="_blank" rel="noopener" class="blog-link" data-category="personal">
-        <div class="blog-item reveal" data-category="personal">
-          <div class="blog-thumb th-c">
-            <div class="thumb-chip">Personal</div>
-            <img src="../Assets/medium5.png" alt="On Applying for Things You're Not Sure You're Ready For">
-            <div class="blog-overlay">
-              <span>Read on Medium →</span>
-            </div>
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta-row">
-              <span class="blog-cat">Personal</span>
-              <span class="blog-badge badge-green">Case Study</span>
-            </div>
-            <div class="blog-title">The Loophole Strategy: How TD Bank Hijacked the World’s Biggest Brands</div>
-            <div class="blog-excerpt">How Ogilvy Canada helped TD Bank hijack Nike and Apple’s brand equity without asking for permission. A study in strategic framing. 🖼️📈
-</div>
-            <div class="blog-footer">
-              <span class="blog-date">May 2026</span>
-              <span class="blog-dot">·</span>
-              <span class="blog-read">4 min read</span>
-            </div>
-            <div class="blog-tags">
-              <span class="tag">Marketing Strategy</span>
-              <span class="tag">Branding</span>
-              <span class="tag">Creative Strategy</span>
-              <span class="tag">Consumer Psychology</span>
-              <span class="tag">Investment Marketing</span>
-            </div>
-          </div>
-        </div>
-      </a>
-
-    </div>
-
-    <!-- Empty state -->
-    <div class="empty-state" id="empty-state" style="display:none">
-      <div class="empty-icon">◎</div>
-      <div class="empty-text">No articles in this category yet.</div>
-    </div>
-
-  </main>
-
-  <!-- MEDIUM CTA STRIP -->
-  <div class="medium-strip reveal">
-    <div class="medium-inner">
-      <div class="medium-m">M</div>
-      <div class="medium-copy">
-        <div class="medium-label">All articles live on Medium</div>
-        <div class="medium-sub">Follow along for new pieces on marketing, design, and everything in between.</div>
-      </div>
-      <a href="https://medium.com/@yohanwick17" target="_blank" rel="noopener" class="medium-btn">Follow on Medium →</a>
-    </div>
-  </div>
-
-  <!-- CONTACT STRIP -->
-  <div class="contact-wrap reveal">
-    <div class="contact-inner">
-      <h2>Got a project in mind? <span><br>Let's talk.</span></h2>
-      <a href="contactme.html" class="contact-email">Get in touch →</a>
-    </div>
-  </div>
-
-  <footer>
-    <span>© 2026 Yohan Wickramasinghe</span>
-  </footer>
-
-  <script src="../JS/blogs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="../JS/site.js"></script>
 </body>
 </html>

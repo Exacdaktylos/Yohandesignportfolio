@@ -1,142 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Yohan Wickramasinghe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Cabinet+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/contactme.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Yohan Wickramasinghe</title>
+<meta name="description" content="Get in touch with Yohan Wickramasinghe about campaigns, brand work or a chat about design.">
+<meta name="theme-color" content="#070707">
+<meta property="og:title" content="Contact | Yohan Wickramasinghe">
+<meta property="og:description" content="Get in touch with Yohan Wickramasinghe about campaigns, brand work or a chat about design.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../favicon.ico">
+<script>
+(function(){var d=document.documentElement;d.classList.add('js');
+try{if(sessionStorage.getItem('ywSeen'))d.classList.add('no-pre');
+if(sessionStorage.getItem('ywNav')==='1'){d.classList.add('is-entering');setTimeout(function(){d.classList.remove('is-entering')},4000)}}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/site.css">
+<link rel="stylesheet" href="../CSS/contactme.css">
 </head>
 <body>
+<div class="curtain" aria-hidden="true"></div>
+<div class="scrollbar" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-bubble" aria-hidden="true"></div>
 
-  <!-- NAV -->
-  <nav>
-    <a href="../index.html" class="logo">YW<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="aboutme.html">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blogs.html">Blogs</a></li>
-    </ul>
-    <a href="mailto:yohanwick17@gmail.com" class="nav-btn">Contact me</a>
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<header class="nav" id="nav">
+  <a class="logo" href="/" aria-label="Yohan Wickramasinghe, home">YW<span>.</span></a>
+  <nav aria-label="Main">
+    <ul class="nav-links"><li><a href="/public/aboutme">About Me</a></li><li><a href="/public/projects">Projects</a></li><li><a href="/public/blogs">Blogs</a></li></ul>
   </nav>
+  <a class="nav-btn" href="/public/contactme" aria-current="page">Contact me</a>
+  <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</header>
 
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <ul class="mobile-nav-links">
-        <li><a href="aboutme.html" class="mobile-link">About Me</a></li>
-        <li><a href="projects.html" class="mobile-link">Projects</a></li>
-        <li><a href="blogs.html" class="mobile-link">Blogs</a></li>
-      </ul>
-      <a href="mailto:yohanwick17@gmail.com" class="mobile-cta">Contact me</a>
-    </div>
-  </div>
+<div class="menu" id="menu" aria-hidden="true">
+  <ul><li><a href="/public/aboutme">About Me</a></li><li><a href="/public/projects">Projects</a></li><li><a href="/public/blogs">Blogs</a></li><li><a href="/public/contactme" aria-current="page">Contact me</a></li></ul>
+  <p>Graphic designer</p>
+</div>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="hero-bg">
-      <div class="orb orb1"></div>
-      <div class="orb orb2"></div>
+<main>
+  <header class="page-hero" data-theme="ink">
+    <div class="hero-bg" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="halftone"></div></div>
+    <h1 class="page-title kinetic" aria-label="Let’s make something great"><span class="line" aria-hidden="true"><span class="word">Let’s</span><span class="word">make</span></span><span class="line" aria-hidden="true"><span class="word">something</span><span class="word">great</span></span></h1>
+    <p class="page-sub" data-intro>Whether it’s a campaign, a brand, or just a conversation, I’d love to hear from you.</p>
+  </header>
+  <section class="ct-wrap light" data-theme="paper" aria-label="Contact details">
+    <div class="ct-intro">
+      <p>I’m open to new projects, collaborations, or just a chat about design. Pick whichever channel works best for you.</p>
+      <span class="avail"><i aria-hidden="true"></i>Available for new roles and projects</span>
     </div>
-    <div class="page-hero-inner">
-      <div class="hero-eyebrow">
-        <span class="eyebrow-dot"></span>
-        Get in touch
-      </div>
-      <h1>Let's make<br><span class="grad-text">something great</span></h1>
-      <p class="hero-sub">Whether it's a campaign, a brand, or just a conversation, I'd love to hear from you.</p>
-    </div>
+    <ul class="ct-list">
+<li data-rule><a class="ct-row" href="mailto:yohanwick17@gmail.com"><span class="ct-l">Email</span><span class="ct-v">yohanwick17@gmail.com</span><span class="ct-go"><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+<li data-rule><a class="ct-row" href="https://wa.me/94760299469" target="_blank" rel="noopener"><span class="ct-l">WhatsApp</span><span class="ct-v">+94 76 029 9469</span><span class="ct-go"><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+<li data-rule><a class="ct-row" href="https://www.linkedin.com/in/yohan-wickramasinghe/" target="_blank" rel="noopener"><span class="ct-l">LinkedIn</span><span class="ct-v">Yohan Wickramasinghe</span><span class="ct-go"><svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+<li data-rule><div class="ct-row is-static"><span class="ct-l">Location</span><span class="ct-v">Piliyandala, Sri Lanka</span></div></li>
+<li data-rule><div class="ct-row is-static"><span class="ct-l">Response time</span><span class="ct-v">Usually within 24 hours</span></div></li>
+    </ul>
   </section>
+</main>
 
-  <!-- CONTACT CONTENT -->
-  <section class="contact-section">
-    <div class="contact-content reveal">
+<footer class="foot">
+  <span>&copy; 2026 Yohan Wickramasinghe</span>
+  <ul>
+    <li><a href="/public/aboutme">About Me</a></li>
+    <li><a href="/public/projects">Projects</a></li>
+    <li><a href="/public/blogs">Blogs</a></li>
+    <li><a href="/public/contactme">Contact me</a></li>
+  </ul>
+  <button type="button" id="toTop">Back to top</button>
+</footer>
 
-      <div class="contact-header">
-        <div class="sec-label">Reach out</div>
-        <h2 class="sec-title">Say hello</h2>
-        <p class="contact-intro">I'm always open to new projects, collaborations, or just a chat about design. Pick whichever channel works best for you.</p>
-      </div>
-
-      <div class="detail-cards">
-
-        <!-- Email — opens Gmail compose in new tab -->
-        <a href="https://mail.google.com/mail/?view=cm&to=yohanwick17@gmail.com" target="_blank" rel="noopener" class="detail-card">
-          <div class="detail-card-icon icon-email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-          </div>
-          <div class="detail-card-body">
-            <div class="detail-card-label">Email</div>
-            <div class="detail-card-value">yohanwick17@gmail.com</div>
-          </div>
-          <div class="detail-card-arrow">→</div>
-        </a>
-
-        <!-- WhatsApp — opens chat directly -->
-        <a href="https://wa.me/94760299469" target="_blank" rel="noopener" class="detail-card">
-          <div class="detail-card-icon icon-whatsapp">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </div>
-          <div class="detail-card-body">
-            <div class="detail-card-label">WhatsApp</div>
-            <div class="detail-card-value">+94 76 029 9469</div>
-          </div>
-          <div class="detail-card-arrow">→</div>
-        </a>
-
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/yohan-wickramasinghe/" target="_blank" rel="noopener" class="detail-card">
-          <div class="detail-card-icon icon-linkedin">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </div>
-          <div class="detail-card-body">
-            <div class="detail-card-label">LinkedIn</div>
-            <div class="detail-card-value">Yohan Wickramasinghe</div>
-          </div>
-          <div class="detail-card-arrow">→</div>
-        </a>
-
-        <!-- Location — no link -->
-        <div class="detail-card no-link">
-          <div class="detail-card-icon icon-location">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div class="detail-card-body">
-            <div class="detail-card-label">Location</div>
-            <div class="detail-card-value">Piliyandala, Sri Lanka</div>
-          </div>
-        </div>
-
-        <!-- Response time — no link -->
-        <div class="detail-card no-link">
-          <div class="detail-card-icon icon-clock">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="detail-card-body">
-            <div class="detail-card-label">Response time</div>
-            <div class="detail-card-value">Usually within 24 hours</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="availability-badge">
-        <span class="dot"></span>
-        Available for new roles &amp; projects
-      </div>
-
-    </div>
-  </section>
-
-   <footer>
-    <span>© 2026 Yohan Wickramasinghe</span>
-  </footer>
-
-  <script src="../JS/contactme.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="../JS/site.js"></script>
 </body>
 </html>

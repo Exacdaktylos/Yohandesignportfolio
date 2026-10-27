@@ -1,274 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Yohan Wickramasinghe</title>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Cabinet+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../CSS/aboutme.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Yohan Wickramasinghe</title>
+<meta name="description" content="Digital learning designer and graphic designer from Sri Lanka. Experience, education and leadership.">
+<meta name="theme-color" content="#070707">
+<meta property="og:title" content="About | Yohan Wickramasinghe">
+<meta property="og:description" content="Digital learning designer and graphic designer from Sri Lanka. Experience, education and leadership.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../favicon.ico">
+<script>
+(function(){var d=document.documentElement;d.classList.add('js');
+try{if(sessionStorage.getItem('ywSeen'))d.classList.add('no-pre');
+if(sessionStorage.getItem('ywNav')==='1'){d.classList.add('is-entering');setTimeout(function(){d.classList.remove('is-entering')},4000)}}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/site.css">
+<link rel="stylesheet" href="../CSS/aboutme.css">
 </head>
 <body>
+<div class="curtain" aria-hidden="true"></div>
+<div class="scrollbar" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-bubble" aria-hidden="true"></div>
 
-  <!-- NAV -->
-  <nav>
-    <a href="../index.html" class="logo">YW<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="aboutme.html" class="active">About Me</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="blogs.html">Blogs</a></li>
-    </ul>
-    <a href="contactme.html" class="nav-btn">Contact me</a>
-    <!-- Hamburger — visible on mobile only -->
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+<header class="nav" id="nav">
+  <a class="logo" href="/" aria-label="Yohan Wickramasinghe, home">YW<span>.</span></a>
+  <nav aria-label="Main">
+    <ul class="nav-links"><li><a href="/public/aboutme" aria-current="page">About Me</a></li><li><a href="/public/projects">Projects</a></li><li><a href="/public/blogs">Blogs</a></li></ul>
   </nav>
+  <a class="nav-btn" href="/public/contactme">Contact me</a>
+  <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</header>
 
-  <!-- Mobile menu overlay -->
-  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <ul class="mobile-nav-links">
-        <li><a href="aboutme.html" class="mobile-link active">About Me</a></li>
-        <li><a href="projects.html" class="mobile-link">Projects</a></li>
-        <li><a href="blogs.html" class="mobile-link">Blogs</a></li>
-      </ul>
-      <a href="contactme.html" class="mobile-cta">Contact me</a>
-    </div>
-  </div>
+<div class="menu" id="menu" aria-hidden="true">
+  <ul><li><a href="/public/aboutme" aria-current="page">About Me</a></li><li><a href="/public/projects">Projects</a></li><li><a href="/public/blogs">Blogs</a></li><li><a href="/public/contactme">Contact me</a></li></ul>
+  <p>Graphic designer</p>
+</div>
 
-  <!-- HERO — photo + name + personal details -->
-  <section class="hero">
-    <div class="hero-bg">
-      <div class="orb orb1"></div>
-      <div class="orb orb2"></div>
-    </div>
-    <div class="hero-inner">
-
-      <div class="profile-col">
-        <div class="photo-frame">
-          <img src="../Assets/Yohan - Campaign Coordinator.jpg" alt="Yohan Wickramasinghe" class="photo" id="profile-photo">
-          <div class="photo-placeholder" id="photo-placeholder">
-            <span>YW</span>
-          </div>
-        </div>
-        <div class="availability-badge">
-          <span class="dot"></span>
-          Available for new roles
-        </div>
+<main>
+  <header class="page-hero" data-theme="ink">
+    <div class="hero-bg" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="halftone"></div></div>
+    <h1 class="page-title kinetic" aria-label="Yohan Wickramasinghe"><span class="line" aria-hidden="true"><span class="word">Yohan</span></span><span class="line" aria-hidden="true"><span class="word">Wickramasinghe</span></span></h1>
+    <div class="hero-foot-row ab-hero-row">
+      <div data-intro>
+        <span class="pill fill role-pill">Digital Learning Designer</span>
+        <p class="page-sub" style="margin-top:1.1rem">I turn complex ideas into learning experiences people actually remember.</p>
       </div>
-
-      <div class="intro-col">
-        <div class="hero-eyebrow">
-          <span class="eyebrow-dot"></span>
-          Digital Learning Designer
-        </div>
-        <h1>Yohan<br><span class="grad-text">Wickramasinghe</span></h1>
-        <p class="tagline">I turn complex ideas into learning experiences people actually remember.</p>
-
-        <div class="details-grid">
-          <div class="detail-item">
-            <div class="detail-label">Location</div>
-            <div class="detail-value">Piliyandala, Sri Lanka</div>
-          </div>
-          <div class="detail-item">
-            <div class="detail-label">Email</div>
-            <div class="detail-value">
-              <a href="mailto:yohanwick17@gmail.com">yohanwick17@gmail.com</a>
-            </div>
-          </div>
-          <div class="detail-item">
-            <div class="detail-label">LinkedIn</div>
-            <div class="detail-value">
-              <a href="https://www.linkedin.com/in/yohan-wickramasinghe/" target="_blank">Yohan Wickramasinghe</a>
-            </div>
-          </div>
-          <div class="detail-item">
-            <div class="detail-label">Languages</div>
-            <div class="detail-value">English, Sinhala</div>
-          </div>
-        </div>
-
-        <div class="hero-ctas">
-          <a href="projects.html" class="cta-primary">See my work</a>
-          <a href="../Assets/Yohan - Digital Marketer CV.pdf" class="cta-ghost" download>Download CV →</a>
-        </div>
+      <div class="ab-actions" data-intro>
+        <span class="avail"><i aria-hidden="true"></i>Available for new roles</span>
+        <a class="btn btn-solid magnetic" href="../Assets/Yohan%20-%20Digital%20Marketer%20CV.pdf" target="_blank" rel="noopener"><span>Download CV</span></a>
       </div>
-
     </div>
-  </section>
+  </header>
 
-  <!-- ABOUT — bio paragraphs -->
-  <section class="section" id="about">
-    <div class="section-inner">
-      <div class="sec-header reveal">
-        <div class="sec-label">Who I am</div>
-        <h2 class="sec-title">Designing visuals that<br>communicate <span class="grad-text">and connect</span></h2>
+  <section class="sec light" data-theme="paper" aria-labelledby="who-h">
+    <h2 id="who-h" class="sr-only">About Yohan</h2>
+    <div class="ab-intro">
+      <div class="ab-photo">
+        <div class="ab-frame"><div class="ab-mask" data-wipe><img src="../Assets/Yohan%20-%20Campaign%20Coordinator.jpg" width="800" height="1000" alt="Portrait of Yohan Wickramasinghe" loading="lazy"></div></div>
       </div>
-      <div class="bio-grid reveal">
-        <p>I'm a creative designer with a passion for turning ideas into impactful visual experiences. With a background in digital design, content, and branding, I focus on creating work that is not only visually engaging but also purposeful and results-driven. From campaign design to event branding, I aim to craft solutions that connect with people and communicate with clarity.</p>
-        <p>From building campaigns to shaping event identities, I've worked across a range of creative spaces where strategy meets execution. I've developed digital content, promotional materials, and branded assets with a focus on consistency and audience engagement, aiming to create visuals that communicate effectively and leave a lasting impression.</p>
+      <div class="ab-bio">
+        <p class="lead-p">I&#x27;m a creative designer with a passion for turning ideas into impactful visual experiences. With a background in digital design, content, and branding, I focus on creating work that is not only visually engaging but also purposeful and results-driven. From campaign design to event branding, I aim to craft solutions that connect with people and communicate with clarity.</p><p>From building campaigns to shaping event identities, I&#x27;ve worked across a range of creative spaces where strategy meets execution. I&#x27;ve developed digital content, promotional materials, and branded assets with a focus on consistency and audience engagement, aiming to create visuals that communicate effectively and leave a lasting impression.</p>
+        <dl class="ab-details"><div><dt>Location</dt><dd>Piliyandala, Sri Lanka</dd></div><div><dt>Email</dt><dd><a href="mailto:yohanwick17@gmail.com">yohanwick17@gmail.com</a></dd></div><div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/yohan-wickramasinghe/" target="_blank" rel="noopener">Yohan Wickramasinghe</a></dd></div><div><dt>Languages</dt><dd>English, Sinhala</dd></div></dl>
       </div>
     </div>
   </section>
 
-  <div class="full-divider"></div>
+  <section class="who" data-theme="ink" aria-label="Designing visuals that communicate and connect">
+    <h2 class="display" data-lines="top 80%" aria-label="Designing visuals that communicate and connect"><span class="line"><span class="li">Designing visuals</span></span><span class="line"><span class="li">that communicate</span></span><span class="line"><span class="li">and connect</span></span></h2>
+  </section>
 
-  <!-- WORK EXPERIENCE -->
-  <section class="section" id="experience">
-    <div class="section-inner">
-      <div class="sec-header reveal">
-        <div class="sec-label">Career</div>
-        <h2 class="sec-title">Work experience</h2>
-      </div>
-
-      <div class="timeline-list">
-
-        <div class="tl-item reveal">
-          <div class="tl-left">
-            <div class="tl-date">Dec 2024 - Present</div>
-            <div class="tl-dot-wrap">
-              <div class="tl-dot c-orange"></div>
-              <div class="tl-line"></div>
-            </div>
-          </div>
-          <div class="tl-right">
-            <div class="tl-role">Content Writer</div>
-            <div class="tl-company">Hype Invention · Full-time</div>
-            <ul class="tl-bullets">
-              <li>Created engaging written content for digital campaigns, aligning messaging with brand voice and marketing objectives</li>
-              <li>Collaborated with design and marketing teams to develop cohesive campaign narratives across multiple platforms</li>
-              <li>Crafted compelling copy for social media and promotional materials to enhance audience engagement and communication effectiveness</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tl-item reveal">
-          <div class="tl-left">
-            <div class="tl-date">Dec 2023 - Dec 2024</div>
-            <div class="tl-dot-wrap">
-              <div class="tl-dot c-violet"></div>
-              <div class="tl-line"></div>
-            </div>
-          </div>
-          <div class="tl-right">
-            <div class="tl-role">Software Engineer</div>
-            <div class="tl-company">ZILLIONe · Intern</div>
-            <ul class="tl-bullets">
-              <li>Development of applications for new clients</li>
-              <li>Bug fixing for already existing systems</li>
-              <li>Aided in Frontend Development</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
+  <section class="sec light" data-theme="paper" aria-labelledby="exp-h">
+    <div class="split">
+      <div class="split-head"><h2 id="exp-h" class="sec-title display" data-lines><span class="line"><span class="li">Work</span></span><span class="line"><span class="li">experience</span></span></h2></div>
+      <ul class="rows"><li data-rule><div class="exp-row"><p class="exp-date">Dec 2024 - Present</p><div><h3 class="exp-role">Content Writer</h3><p class="exp-co">Hype Invention · Full-time</p><ul class="exp-list"><li>Created engaging written content for digital campaigns, aligning messaging with brand voice and marketing objectives</li><li>Collaborated with design and marketing teams to develop cohesive campaign narratives across multiple platforms</li><li>Crafted compelling copy for social media and promotional materials to enhance audience engagement and communication effectiveness</li></ul></div></div></li><li data-rule><div class="exp-row"><p class="exp-date">Dec 2023 - Dec 2024</p><div><h3 class="exp-role">Software Engineer</h3><p class="exp-co">ZILLIONe · Intern</p><ul class="exp-list"><li>Development of applications for new clients</li><li>Bug fixing for already existing systems</li><li>Aided in Frontend Development</li></ul></div></div></li></ul>
     </div>
   </section>
 
-  <div class="full-divider"></div>
-
-  <!-- EDUCATION -->
-  <section class="section" id="education">
-    <div class="section-inner">
-      <div class="sec-header reveal">
-        <div class="sec-label">Qualifications</div>
-        <h2 class="sec-title">Education</h2>
-      </div>
-
-      <div class="card-grid">
-
-        <div class="edu-card reveal">
-          <div class="edu-icon c-orange">BSc</div>
-          <div class="edu-body">
-            <div class="edu-degree">Bachelor of Science in Information Technology Specialising in Software Engineering</div>
-            <div class="edu-school">Sri Lanka Institute of Information Technology</div>
-            <div class="edu-year">2022 - 2027</div>
-            <p class="edu-note">Specialised in software engineering, focusing on problem-solving, system design, and application development.</p>
-          </div>
-        </div>
-
-        <div class="edu-card reveal">
-          <div class="edu-icon c-cyan">GCSE</div>
-          <div class="edu-body">
-            <div class="edu-degree">GCSE Advanced Level</div>
-            <div class="edu-school">Saudi Arabia</div>
-            <div class="edu-year">2021</div>
-            <p class="edu-note">Completed Advanced Level studies in Mathematics, Physics, Information Technology, and Chemistry, building a strong analytical and problem-solving foundation.</p>
-          </div>
-        </div>
-
-        <div class="edu-card reveal">
-          <div class="edu-icon c-violet">Cert</div>
-          <div class="edu-body">
-            <div class="edu-degree">Certificate in Fundamentals of Digital Marketing</div>
-            <div class="edu-school">Google Digital Garage</div>
-            <div class="edu-year">2022</div>
-            <p class="edu-note">Completed the Fundamentals of Digital Marketing certification by Google Digital Garage, covering core concepts of online marketing.</p>
-          </div>
-        </div>
-
-      </div>
+  <section class="sec edu" data-theme="ink" aria-labelledby="edu-h">
+    <div class="split">
+      <div class="split-head"><h2 id="edu-h" class="sec-title display" data-lines><span class="line"><span class="li">Education</span></span></h2></div>
+      <ul class="rows"><li data-rule><div class="edu-row"><span class="edu-badge" aria-hidden="true">BSc</span><div><h3 class="edu-deg">Bachelor of Science in Information Technology Specialising in Software Engineering</h3><p class="edu-school">Sri Lanka Institute of Information Technology</p><p class="edu-note">Specialised in software engineering, focusing on problem-solving, system design, and application development.</p></div><p class="edu-year">2022 - 2027</p></div></li><li data-rule><div class="edu-row"><span class="edu-badge" aria-hidden="true">GCSE</span><div><h3 class="edu-deg">GCSE Advanced Level</h3><p class="edu-school">Saudi Arabia</p><p class="edu-note">Completed Advanced Level studies in Mathematics, Physics, Information Technology, and Chemistry, building a strong analytical and problem-solving foundation.</p></div><p class="edu-year">2021</p></div></li><li data-rule><div class="edu-row"><span class="edu-badge" aria-hidden="true">Cert</span><div><h3 class="edu-deg">Certificate in Fundamentals of Digital Marketing</h3><p class="edu-school">Google Digital Garage</p><p class="edu-note">Completed the Fundamentals of Digital Marketing certification by Google Digital Garage, covering core concepts of online marketing.</p></div><p class="edu-year">2022</p></div></li></ul>
     </div>
   </section>
 
-  <div class="full-divider"></div>
-
-  <!-- LEADERSHIP & VOLUNTEERING -->
-  <section class="section" id="leadership">
-    <div class="section-inner">
-      <div class="sec-header reveal">
-        <div class="sec-label">Beyond the day job</div>
-        <h2 class="sec-title">Leadership &amp;<br>Volunteering</h2>
-      </div>
-
-      <div class="lv-grid">
-
-        <div class="lv-card reveal">
-          <div class="lv-tag badge-orange">Organising Committee</div>
-          <div class="lv-title">Organising Committee President - Benchmark 3.0</div>
-          <div class="lv-org">Oct 2024 - Dec 2024</div>
-          <p class="lv-desc">Led the organising committee for Benchmark 3.0, managing marketing, planning, and execution. Contributed to achieving over 600 registrations, 400+ delegates, and 100 participating teams, with the event winning the Most Outstanding Event Award at AIESEC in SLIIT's award ceremony.</p>
-        </div>
-
-        <div class="lv-card reveal">
-          <div class="lv-tag badge-violet">Leadership Role</div>
-          <div class="lv-title">Campaign Coordinator - iGV IR & M AIESEC in SLIIT</div>
-          <div class="lv-org">Jul 2025 - Feb 2026</div>
-          <p class="lv-desc">Served as Campaign Coordinator for iGV IR & M at AIESEC in SLIIT, leading the planning and execution of attraction campaigns. Worked closely with the team to develop and deliver digital content aimed at increasing awareness and driving engagement for international volunteering opportunities.</p>
-        </div>
-
-        <div class="lv-card reveal">
-          <div class="lv-tag badge-cyan">Volunteering</div>
-          <div class="lv-title">Editor - Rotaract Club of SLIIT</div>
-          <div class="lv-org">2023 - 2024</div>
-          <p class="lv-desc">Served as Editor of the Rotaract Club of SLIIT, overseeing content creation, editing, and publication of quarterly magazines, along with managing and updating the club's website. Collaborated with contributors to curate, refine, and maintain consistent editorial quality across all published materials.</p>
-        </div>
-
-        <div class="lv-card reveal">
-          <div class="lv-tag badge-green">Community</div>
-          <div class="lv-title">Editor - Faculty of Computing Student Community</div>
-          <div class="lv-org">2024 - 2025</div>
-          <p class="lv-desc">Served as Editor of the Faculty of Computing Student Community, overseeing content creation, editing, and publication of digital materials. Worked closely with contributors to ensure consistency, clarity, and quality across all communications and published content.</p>
-        </div>
-
-      </div>
+  <section class="sec light" data-theme="paper" aria-labelledby="lead-h">
+    <div class="lead-head">
+      <h2 id="lead-h" class="sec-title display" data-lines><span class="line"><span class="li">Leadership &amp;</span></span><span class="line"><span class="li">volunteering</span></span></h2>
+      <p>The work I do outside the day job, mostly with AIESEC in SLIIT.</p>
     </div>
+    <div class="lead-grid"><article class="lead-card"><span class="pill">Organising Committee</span><h3>Organising Committee President - Benchmark 3.0</h3><p class="lead-when">Oct 2024 - Dec 2024</p><p class="d">Led the organising committee for Benchmark 3.0, managing marketing, planning, and execution. Contributed to achieving over 600 registrations, 400+ delegates, and 100 participating teams, with the event winning the Most Outstanding Event Award at AIESEC in SLIIT&#x27;s award ceremony.</p></article><article class="lead-card"><span class="pill">Leadership Role</span><h3>Campaign Coordinator - iGV IR &amp; M AIESEC in SLIIT</h3><p class="lead-when">Jul 2025 - Feb 2026</p><p class="d">Served as Campaign Coordinator for iGV IR &amp; M at AIESEC in SLIIT, leading the planning and execution of attraction campaigns. Worked closely with the team to develop and deliver digital content aimed at increasing awareness and driving engagement for international volunteering opportunities.</p></article><article class="lead-card"><span class="pill">Volunteering</span><h3>Editor - Rotaract Club of SLIIT</h3><p class="lead-when">2023 - 2024</p><p class="d">Served as Editor of the Rotaract Club of SLIIT, overseeing content creation, editing, and publication of quarterly magazines, along with managing and updating the club&#x27;s website. Collaborated with contributors to curate, refine, and maintain consistent editorial quality across all published materials.</p></article><article class="lead-card"><span class="pill">Community</span><h3>Editor - Faculty of Computing Student Community</h3><p class="lead-when">2024 - 2025</p><p class="d">Served as Editor of the Faculty of Computing Student Community, overseeing content creation, editing, and publication of digital materials. Worked closely with contributors to ensure consistency, clarity, and quality across all communications and published content.</p></article></div>
   </section>
 
-  <!-- CONTACT STRIP -->
-  <div class="contact-wrap reveal" id="contact">
-    <div class="contact-inner">
-      <h2>Let’s build something <span>that truly connects</span></h2>
-      <a href="contactme.html" class="contact-email">Say hello →</a>
-    </div>
-  </div>
+  <section class="cta light" id="contact" data-theme="lime">
+    <div class="cta-dome" aria-hidden="true"></div>
+    <h2 class="cta-title display" aria-label="Let’s build something that truly connects">
+      <span class="line"><span class="li">Let’s build</span></span><span class="line"><span class="li">something</span></span><span class="line"><span class="li">that truly</span></span><span class="line"><span class="li">connects</span></span>
+    </h2>
+    <a class="magnet magnetic" href="/public/contactme"><span>Say hello <svg class="ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </section>
 
-   <footer>
-    <span>© 2026 Yohan Wickramasinghe</span>
-  </footer>
+</main>
 
-  <script src="../JS/aboutme.js"></script>
+<footer class="foot">
+  <span>&copy; 2026 Yohan Wickramasinghe</span>
+  <ul>
+    <li><a href="/public/aboutme">About Me</a></li>
+    <li><a href="/public/projects">Projects</a></li>
+    <li><a href="/public/blogs">Blogs</a></li>
+    <li><a href="/public/contactme">Contact me</a></li>
+  </ul>
+  <button type="button" id="toTop">Back to top</button>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="../JS/site.js"></script>
 </body>
 </html>
