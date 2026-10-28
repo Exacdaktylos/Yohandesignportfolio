@@ -14,11 +14,14 @@ window.YWPage = function (YW) {
     const wrap = title.parentElement;
     const avail = wrap.clientWidth;
     title.style.fontSize = '100px';
-    let need = $('.l2 .word', title).getBoundingClientRect().width;
+    /* widest single word everywhere; on desktop also the widest whole line (lines do not wrap there) */
+    let need = Math.max(...$$('.word', title).map(w => w.getBoundingClientRect().width));
     if (innerWidth >= 900) {
-      const words = $$('.l3 .word', title);
-      const w3 = words.reduce((a, w) => a + w.getBoundingClientRect().width, 0) + 17; /* .17em gap at 100px */
-      need = Math.max(need, w3);
+      $$('.line', title).forEach(l => {
+        const ws = $$('.word', l);
+        const sum = ws.reduce((a, w) => a + w.getBoundingClientRect().width, 0) + (ws.length - 1) * 17; /* .17em gap at 100px */
+        need = Math.max(need, sum);
+      });
     }
     let fs = 100 * avail / need * 0.995;
     if (innerWidth >= 900) fs = Math.min(fs, (innerHeight - 440) / (3 * 0.84));
@@ -174,6 +177,8 @@ window.YWPage = function (YW) {
       YW.revealLines($('.p-head h2'), 'top 85%');
     });
 
+    YW.revealLines($('.ark-title'), 'top 80%');
+    if (fine && !reduce) $$('.ark .magnetic').forEach(el => YW.magnetic(el, 0.25));
     YW.setupCta();
     ScrollTrigger.refresh();
   }

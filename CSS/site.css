@@ -114,12 +114,12 @@ ul,ol{list-style:none}
 .menu li{overflow:hidden}
 .menu a{
   display:block;font-family:var(--display);font-weight:900;font-style:italic;text-transform:uppercase;
-  font-size:clamp(3.6rem,19vw,7rem);line-height:.95;
+  font-size:clamp(3rem,15vw,6rem);line-height:.95;
   transform:translateY(105%);transition:transform .8s var(--ease);
 }
 .menu-open .menu a{transform:none}
 .menu li:nth-child(1) a{transition-delay:.15s}.menu li:nth-child(2) a{transition-delay:.21s}
-.menu li:nth-child(3) a{transition-delay:.27s}.menu li:nth-child(4) a{transition-delay:.33s}
+.menu li:nth-child(3) a{transition-delay:.27s}.menu li:nth-child(4) a{transition-delay:.33s}.menu li:nth-child(5) a{transition-delay:.39s}
 .menu p{margin-top:2rem;font-weight:500}
 
 /* ---------- buttons, chips ---------- */

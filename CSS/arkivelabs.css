@@ -1,0 +1,13 @@
+/* Arkive Labs page (also loads aboutme.css for .sec, .split, .who, .lead-card) */
+.ak-text .lead-p{font-size:clamp(1.45rem,2.5vw,2.45rem);line-height:1.2;font-weight:500;letter-spacing:-.01em;max-width:30ch}
+.ak-text p+p{margin-top:1.4rem;color:var(--mute-paper);max-width:56ch}
+.ak-who{margin-top:2rem;color:var(--paper);max-width:40ch;font-size:clamp(1.15rem,1.8vw,1.6rem);line-height:1.35}
+.ak-grid .lead-card h3{font-size:1.6rem}
+.ak-role{background:var(--ink);color:var(--paper)}
+.ak-role .ak-text .lead-p{color:var(--paper)}
+.ak-shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.6rem;align-items:start}
+.ak-shot{overflow:hidden;box-shadow:9px 9px 0 var(--ink);background:var(--ink)}
+.ak-shot img{width:100%;height:auto}
+/* placeholder copy is marked so it cannot be mistaken for finished text; remove the data-placeholder attribute (or the whole span) once real copy is in */
+.ph[data-placeholder]{outline:2px dashed var(--acid);outline-offset:3px}
+@media (max-width:899px){.ak-shots{grid-template-columns:1fr}}
