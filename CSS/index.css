@@ -184,3 +184,7 @@
 .ark-title .line:nth-child(2){color:var(--electric)}
 .ark-copy p{color:var(--mute);max-width:30ch;margin-bottom:1.6rem;font-size:clamp(1.05rem,1.4vw,1.25rem)}
 @media (max-width:899px){.ark-inner{grid-template-columns:1fr}}
+
+.ark-inner{position:relative;z-index:1}
+.ark-mark{position:absolute;right:var(--pad);top:50%;transform:translateY(-50%);width:clamp(12rem,26vw,28rem);height:auto;opacity:.1;pointer-events:none}
+@media (max-width:899px){.ark-mark{width:52vw;top:18%;right:-4vw}}

@@ -11,3 +11,13 @@
 /* placeholder copy is marked so it cannot be mistaken for finished text; remove the data-placeholder attribute (or the whole span) once real copy is in */
 .ph[data-placeholder]{outline:2px dashed var(--acid);outline-offset:3px}
 @media (max-width:899px){.ak-shots{grid-template-columns:1fr}}
+
+/* logos */
+.hero-bg .ak-mark{position:absolute;right:calc(var(--pad) + 1vw);top:50%;width:clamp(13rem,30vw,32rem);height:auto;opacity:.13;transform:translateY(-52%);animation:markFloat 9s ease-in-out infinite}
+@keyframes markFloat{50%{transform:translateY(-48%) rotate(-2deg)}}
+.ak-logo{display:block;width:min(15rem,100%);height:auto;margin-top:1.8rem}
+.ak-visit{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2rem 4rem;padding:clamp(3.5rem,6vw,6rem) var(--pad);border-top:1px solid var(--line-paper)}
+.ak-visit img{width:clamp(14rem,26vw,24rem);height:auto}
+.ak-visit p{max-width:30ch;font-size:clamp(1.15rem,1.8vw,1.6rem);line-height:1.3;margin-bottom:1.3rem}
+@media (max-width:899px){.hero-bg .ak-mark{width:58vw;top:30%;right:-6vw;opacity:.1}}
+@media (prefers-reduced-motion:reduce){.hero-bg .ak-mark{animation:none}}
